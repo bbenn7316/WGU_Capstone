@@ -63,7 +63,8 @@ def convert_dict_to_string(dict_object):
 
 # Function Provided By: Adrian 124 [1]
 def read_convert_json_dataset():
-    json_path = pathlib.Path(__file__).parent / 'data' / 'games.json'
+    json_path = "...data\games.json"
+    #pathlib.Path(__file__).parent / 'data' / 'games.json'
     _df = pd.read_json(json_path)
     _df = _df.T
     _df['AppID'] = _df.index

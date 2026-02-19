@@ -1,6 +1,7 @@
 import pandas as pd
 import numpy as np
 import os
+import pathlib
 
 
 
@@ -59,9 +60,10 @@ def convert_dict_to_string(dict_object):
     keys_string = ",".join(key_list)
     return keys_string
 
+
 # Function Provided By: Adrian 124 [1]
 def read_convert_json_dataset():
-    json_path = "...\games.json"
+    json_path = pathlib.Path(__file__).parent / 'data' / 'games.json'
     _df = pd.read_json(json_path)
     _df = _df.T
     _df['AppID'] = _df.index

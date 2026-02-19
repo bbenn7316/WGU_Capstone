@@ -61,7 +61,7 @@ def convert_dict_to_string(dict_object):
 
 # Function Provided By: Adrian 124 [1]
 def read_convert_json_dataset():
-    json_path = "D:\WGU Classes\Capstone\Capstone Project ML\data\games.json"
+    json_path = "...\games.json"
     _df = pd.read_json(json_path)
     _df = _df.T
     _df['AppID'] = _df.index
